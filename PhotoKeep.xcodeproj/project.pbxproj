@@ -12,6 +12,16 @@
 		36D047D01CA181BD00C97706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D047CE1CA181BD00C97706 /* Main.storyboard */; };
 		36D047D21CA181BE00C97706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D047D11CA181BE00C97706 /* Assets.xcassets */; };
 		36D047D51CA181BE00C97706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D047D31CA181BE00C97706 /* LaunchScreen.storyboard */; };
+		36D047DF1CA18CBF00C97706 /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047DE1CA18CBF00C97706 /* KinveyKit.framework */; };
+		36D047E11CA18D1C00C97706 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047E01CA18D1C00C97706 /* Accounts.framework */; };
+		36D047E31CA18D2700C97706 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047E21CA18D2700C97706 /* CoreGraphics.framework */; };
+		36D047E51CA18D2E00C97706 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047E41CA18D2E00C97706 /* CoreLocation.framework */; };
+		36D047E71CA18D3E00C97706 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047E61CA18D3E00C97706 /* libsqlite3.0.tbd */; };
+		36D047E91CA18D4600C97706 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047E81CA18D4600C97706 /* MobileCoreServices.framework */; };
+		36D047EB1CA18D5200C97706 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047EA1CA18D5200C97706 /* Security.framework */; };
+		36D047ED1CA18D5A00C97706 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047EC1CA18D5A00C97706 /* Social.framework */; };
+		36D047EF1CA18D6400C97706 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047EE1CA18D6400C97706 /* SystemConfiguration.framework */; };
+		36D047F11CA18D6E00C97706 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047F01CA18D6E00C97706 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,17 @@
 		36D047D11CA181BE00C97706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D047D41CA181BE00C97706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36D047D61CA181BE00C97706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D047DE1CA18CBF00C97706 /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
+		36D047E01CA18D1C00C97706 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		36D047E21CA18D2700C97706 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		36D047E41CA18D2E00C97706 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		36D047E61CA18D3E00C97706 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		36D047E81CA18D4600C97706 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		36D047EA1CA18D5200C97706 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		36D047EC1CA18D5A00C97706 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		36D047EE1CA18D6400C97706 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		36D047F01CA18D6E00C97706 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		36D047F21CA18E1B00C97706 /* PhotoKeep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoKeep-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D047F11CA18D6E00C97706 /* WebKit.framework in Frameworks */,
+				36D047EF1CA18D6400C97706 /* SystemConfiguration.framework in Frameworks */,
+				36D047ED1CA18D5A00C97706 /* Social.framework in Frameworks */,
+				36D047EB1CA18D5200C97706 /* Security.framework in Frameworks */,
+				36D047E91CA18D4600C97706 /* MobileCoreServices.framework in Frameworks */,
+				36D047E71CA18D3E00C97706 /* libsqlite3.0.tbd in Frameworks */,
+				36D047E51CA18D2E00C97706 /* CoreLocation.framework in Frameworks */,
+				36D047E31CA18D2700C97706 /* CoreGraphics.framework in Frameworks */,
+				36D047E11CA18D1C00C97706 /* Accounts.framework in Frameworks */,
+				36D047DF1CA18CBF00C97706 /* KinveyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +69,7 @@
 		36D047BE1CA181BD00C97706 = {
 			isa = PBXGroup;
 			children = (
+				36D047DD1CA18C9300C97706 /* Frameworks */,
 				36D047C91CA181BD00C97706 /* PhotoKeep */,
 				36D047C81CA181BD00C97706 /* Products */,
 			);
@@ -60,8 +92,26 @@
 				36D047D11CA181BE00C97706 /* Assets.xcassets */,
 				36D047D31CA181BE00C97706 /* LaunchScreen.storyboard */,
 				36D047D61CA181BE00C97706 /* Info.plist */,
+				36D047F21CA18E1B00C97706 /* PhotoKeep-Bridging-Header.h */,
 			);
 			path = PhotoKeep;
+			sourceTree = "<group>";
+		};
+		36D047DD1CA18C9300C97706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D047F01CA18D6E00C97706 /* WebKit.framework */,
+				36D047EE1CA18D6400C97706 /* SystemConfiguration.framework */,
+				36D047EC1CA18D5A00C97706 /* Social.framework */,
+				36D047EA1CA18D5200C97706 /* Security.framework */,
+				36D047E81CA18D4600C97706 /* MobileCoreServices.framework */,
+				36D047E61CA18D3E00C97706 /* libsqlite3.0.tbd */,
+				36D047E41CA18D2E00C97706 /* CoreLocation.framework */,
+				36D047E21CA18D2700C97706 /* CoreGraphics.framework */,
+				36D047E01CA18D1C00C97706 /* Accounts.framework */,
+				36D047DE1CA18CBF00C97706 /* KinveyKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,10 +301,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhotoKeep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = SauravOrg.PhotoKeep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoKeep/PhotoKeep-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -262,10 +318,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PhotoKeep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = SauravOrg.PhotoKeep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoKeep/PhotoKeep-Bridging-Header.h";
 			};
 			name = Release;
 		};
