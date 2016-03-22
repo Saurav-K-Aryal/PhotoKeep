@@ -39,12 +39,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="1350"/>
+            <point key="canvasLocation" x="645" y="1886"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Ink-rR-6fE">
             <objects>
-                <viewController id="3Nj-ru-lhh" sceneMemberID="viewController">
+                <viewController id="3Nj-ru-lhh" customClass="LoginViewController" customModule="PhotoKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tWH-Mk-Oup"/>
                         <viewControllerLayoutGuide type="bottom" id="Qjd-z0-Suh"/>
@@ -85,6 +85,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressLogin:" destination="3Nj-ru-lhh" eventType="touchUpInside" id="T7m-o1-ahq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMG-ve-PJM">
                                 <rect key="frame" x="400" y="353" width="57" height="30"/>
@@ -114,10 +117,15 @@
                             <constraint firstItem="Gxx-7N-kyp" firstAttribute="top" secondItem="Bee-ES-l4s" secondAttribute="bottom" constant="23" id="zaU-aI-fwA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="Gxx-7N-kyp" id="5CW-Xt-knQ"/>
+                        <outlet property="LoginEmail" destination="jbH-gT-2Gm" id="L4S-UG-9d0"/>
+                        <outlet property="LoginPassword" destination="Bee-ES-l4s" id="Vnl-iB-u9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R91-WN-Q7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="694"/>
+            <point key="canvasLocation" x="899" y="1223"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6mh-cN-Iok">
@@ -180,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yl3-yv-djb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495" y="907"/>
+            <point key="canvasLocation" x="1706" y="1138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ze7-JD-1iD">
