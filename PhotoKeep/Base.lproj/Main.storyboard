@@ -18,28 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Fl-mt5">
-                                <rect key="frame" x="264" y="57" width="72" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-Fl-mt5">
+                                <rect key="frame" x="51" y="-5" width="269" height="306"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-ux-zCs">
+                                <rect key="frame" x="35" y="220" width="160" height="30"/>
+                                <state key="normal" title="Add Photo from Gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOL-5V-4xa">
+                                <rect key="frame" x="250" y="93" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="pressedLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIS-cA-RNo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H00-a5-oLO">
+                                <rect key="frame" x="41" y="93" width="85" height="30"/>
+                                <state key="normal" title="View Photos"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z52-8n-IVa">
+                                <rect key="frame" x="256" y="214" width="147" height="30"/>
+                                <state key="normal" title="Take your own photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afe-vh-KwX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="7ng-Fl-mt5" secondAttribute="trailing" constant="244" id="C39-z0-WOo"/>
-                            <constraint firstItem="7ng-Fl-mt5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="DxK-VR-qG6"/>
-                            <constraint firstItem="7ng-Fl-mt5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="244" id="Iao-sg-bcz"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nfH-AO-kfp"/>
                     <connections>
+                        <outlet property="CameraButton" destination="z52-8n-IVa" id="qxj-AJ-3FN"/>
+                        <outlet property="GalleryImageButton" destination="gI9-ux-zCs" id="8dR-LF-SPv"/>
+                        <outlet property="LogoutButton" destination="EOL-5V-4xa" id="jkp-rG-yQW"/>
+                        <outlet property="WelcomeLabel" destination="7ng-Fl-mt5" id="kXg-Ka-Kt9"/>
                         <segue destination="3Nj-ru-lhh" kind="presentation" identifier="LoginView" id="6MT-lh-mS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="1886"/>
+            <point key="canvasLocation" x="1981" y="284"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ink-rR-6fE">
@@ -60,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="42" id="bSe-Ms-Wyu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbH-gT-2Gm">
@@ -77,13 +98,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qep-f1-bx5">
                                 <rect key="frame" x="263" y="271" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-7N-kyp">
                                 <rect key="frame" x="71" y="353" width="46" height="30"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="pressLogin:" destination="3Nj-ru-lhh" eventType="touchUpInside" id="T7m-o1-ahq"/>
@@ -93,13 +114,14 @@
                                 <rect key="frame" x="400" y="353" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
+                                    <action selector="goToRegistration:" destination="3Nj-ru-lhh" eventType="touchUpInside" id="r5C-bR-Plo"/>
                                     <segue destination="hw2-GT-Dzv" kind="presentation" identifier="registerView" id="07H-7k-9cX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL6-fx-3m7">
                                 <rect key="frame" x="279" y="102" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -118,19 +140,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="LoginButton" destination="Gxx-7N-kyp" id="5CW-Xt-knQ"/>
+                        <outlet property="LoginButton" destination="Gxx-7N-kyp" id="zch-aA-4RG"/>
                         <outlet property="LoginEmail" destination="jbH-gT-2Gm" id="L4S-UG-9d0"/>
                         <outlet property="LoginPassword" destination="Bee-ES-l4s" id="Vnl-iB-u9M"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginToHome" id="68o-MK-Lqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R91-WN-Q7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="899" y="1223"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="6mh-cN-Iok">
             <objects>
-                <viewController id="hw2-GT-Dzv" sceneMemberID="viewController">
+                <viewController id="hw2-GT-Dzv" customClass="RegistrationViewController" customModule="PhotoKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8wx-c6-p70"/>
                         <viewControllerLayoutGuide type="bottom" id="cxc-uI-l9y"/>
@@ -142,7 +165,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isQ-nq-6wb">
                                 <rect key="frame" x="20" y="165" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vY9-wE-UZ5">
@@ -159,7 +182,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrW-zu-vPe">
                                 <rect key="frame" x="20" y="256" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-rQ-cn0">
@@ -169,11 +192,14 @@
                                     <constraint firstAttribute="height" constant="30" id="HeF-nl-L21"/>
                                 </constraints>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="pressRegister:" destination="hw2-GT-Dzv" eventType="touchUpInside" id="8fJ-FY-ERs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-XZ-BYG">
                                 <rect key="frame" x="249" y="130" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -185,10 +211,15 @@
                             <constraint firstItem="0fa-rQ-cn0" firstAttribute="top" secondItem="uaY-o7-1sj" secondAttribute="bottom" constant="26" id="WZp-EV-TbY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="RegistrationEmail" destination="vY9-wE-UZ5" id="D6i-7G-7Bf"/>
+                        <outlet property="RegistrationPassword" destination="uaY-o7-1sj" id="S9x-BX-w4G"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="RegistrationToHome" id="box-py-YZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yl3-yv-djb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="1138"/>
+            <point key="canvasLocation" x="2074" y="1289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ze7-JD-1iD">
@@ -209,4 +240,7 @@
             <point key="canvasLocation" x="440" y="349"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="box-py-YZm"/>
+    </inferredMetricsTieBreakers>
 </document>

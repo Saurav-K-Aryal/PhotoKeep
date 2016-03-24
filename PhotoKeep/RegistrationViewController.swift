@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegistrationViewController.swift
 //  PhotoKeep
 //
 //  Created by Saurav Aryal on 3/22/16.
@@ -10,15 +10,15 @@ import Foundation
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+
+class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var LoginEmail: UITextField!
+    @IBOutlet weak var RegistrationEmail: UITextField!
     
-    @IBOutlet weak var LoginPassword: UITextField!
     
-    @IBOutlet weak var LoginButton: UIButton!
+    @IBOutlet weak var RegistrationPassword: UITextField!
     
-    @IBOutlet weak var RegisterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,17 +27,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func pressLogin(sender: AnyObject) {
-        KCSUser.loginWithUsername(
-            LoginEmail.text,
-            password: LoginPassword.text,
+
+    @IBAction func pressRegister(sender: AnyObject) {
+        KCSUser.userWithUsername(
+            RegistrationEmail.text,
+            password: RegistrationPassword.text,
+            fieldsAndValues: nil,
             withCompletionBlock: { (user: KCSUser!, errorOrNil: NSError!, result: KCSUserActionResult) -> Void in
                 if errorOrNil == nil {
-                    print("Login Succesful")
-                    self.performSegueWithIdentifier("LoginToHome", sender: self)
+                    print("User created!")
+                    self.performSegueWithIdentifier("RegistrationToHome", sender: self)
                 } else {
-                    //there was an error with the update save
                     let message = errorOrNil.localizedDescription
                     let alert = UIAlertView(
                         title: NSLocalizedString("Log-in failed", comment: "Sign account failed"),
@@ -46,15 +46,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         cancelButtonTitle: NSLocalizedString("OK", comment: "OK")
                     )
                     alert.show()
+                    
                 }
             }
         )
+        
     }
-    @IBAction func goToRegistration(sender: AnyObject) {
-        self.performSegueWithIdentifier("registerView", sender: self)
-    }
-    
-    
-    
     
 }

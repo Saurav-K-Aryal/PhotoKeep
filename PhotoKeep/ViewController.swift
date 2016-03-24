@@ -10,6 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var WelcomeLabel: UILabel!
+    
+    
+    @IBOutlet weak var GalleryImageButton: UIButton!
+    
+    @IBOutlet weak var LogoutButton: UIButton!
+    
+    @IBOutlet weak var CameraButton: UIButton!
+    
+    @IBAction func pressedLogout(sender: AnyObject) {
+        KCSUser.activeUser().logout()
+        let message:String = "Logout Succesful"
+        let alert = UIAlertView(
+            title: NSLocalizedString("Logging out..", comment: "Logging out.."),
+            message: message,
+            delegate: nil,
+            cancelButtonTitle: NSLocalizedString("OK", comment: "OK")
+        )
+        alert.show()
+    
+    self.performSegueWithIdentifier("LoginView", sender: self)
+    }
+    
+    @IBAction func takePhoto(sender: AnyObject) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         KCSClient.sharedClient().initializeKinveyServiceForAppKey(
@@ -25,10 +52,16 @@ class ViewController: UIViewController {
 //                print("Kinvey Ping Failed")
 //            }
 //        }
-        if KCSUser.activeUser() == nil {
+        let user_data = KCSUser.activeUser()
+        if user_data == nil {
             self.performSegueWithIdentifier("LoginView", sender: self)
-            
         }
+        else {
+        let user_name = user_data.username
+        
+        }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
