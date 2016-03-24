@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var WelcomeLabel: UILabel!
     
@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var LogoutButton: UIButton!
     
     @IBOutlet weak var CameraButton: UIButton!
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
     
     @IBAction func pressedLogout(sender: AnyObject) {
         KCSUser.activeUser().logout()
@@ -32,8 +37,26 @@ class ViewController: UIViewController {
     
     self.performSegueWithIdentifier("LoginView", sender: self)
     }
+
+    
+    @IBAction func chooseLocalImage(sender: AnyObject) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
     
     @IBAction func takePhoto(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.Camera) {
+            imagePicker.sourceType =
+                .Camera
+            imagePicker.allowsEditing = false
+        self.presentViewController(imagePicker, animated: true,                                       completion: nil)
+        }
+        else {
+            print("camera not found..")
+        }
         
     }
     
@@ -52,6 +75,7 @@ class ViewController: UIViewController {
 //                print("Kinvey Ping Failed")
 //            }
 //        }
+        imagePicker.delegate = self
         let user_data = KCSUser.activeUser()
         if user_data == nil {
             self.performSegueWithIdentifier("LoginView", sender: self)
@@ -68,6 +92,19 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .ScaleAspectFit
+            imageView.image = pickedImage
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 

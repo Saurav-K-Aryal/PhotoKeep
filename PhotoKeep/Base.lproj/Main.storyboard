@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-ux-zCs">
                                 <rect key="frame" x="35" y="220" width="160" height="30"/>
                                 <state key="normal" title="Add Photo from Gallery"/>
+                                <connections>
+                                    <action selector="chooseLocalImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGq-9F-6WY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOL-5V-4xa">
                                 <rect key="frame" x="250" y="93" width="48" height="30"/>
@@ -38,6 +41,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H00-a5-oLO">
                                 <rect key="frame" x="41" y="93" width="85" height="30"/>
                                 <state key="normal" title="View Photos"/>
+                                <connections>
+                                    <action selector="PickLocalImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0z-p0-5ly"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z52-8n-IVa">
                                 <rect key="frame" x="256" y="214" width="147" height="30"/>
@@ -46,6 +52,9 @@
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afe-vh-KwX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSl-y0-QTh">
+                                <rect key="frame" x="65" y="294" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -53,8 +62,10 @@
                     <connections>
                         <outlet property="CameraButton" destination="z52-8n-IVa" id="qxj-AJ-3FN"/>
                         <outlet property="GalleryImageButton" destination="gI9-ux-zCs" id="8dR-LF-SPv"/>
+                        <outlet property="ImageView" destination="MSl-y0-QTh" id="IRX-4t-slZ"/>
                         <outlet property="LogoutButton" destination="EOL-5V-4xa" id="jkp-rG-yQW"/>
                         <outlet property="WelcomeLabel" destination="7ng-Fl-mt5" id="kXg-Ka-Kt9"/>
+                        <outlet property="imageView" destination="MSl-y0-QTh" id="fpf-vJ-4Bl"/>
                         <segue destination="3Nj-ru-lhh" kind="presentation" identifier="LoginView" id="6MT-lh-mS5"/>
                     </connections>
                 </viewController>
