@@ -8,6 +8,31 @@
 
 import UIKit
 
+class SomeImage: NSObject {
+    var someName: String?
+    var somePlace: String?
+    var someId: String?
+    var someImage: UIImage?
+    
+    override func hostToKinveyPropertyMapping() -> [NSObject : AnyObject]! {
+        return [
+            "someId" : KCSEntityKeyId,
+            "someName" : "someName",
+            "somePlace" : "somePlace",
+            "someImage" : "someImage",
+        ]
+    }
+    override class func kinveyPropertyToCollectionMapping() -> [NSObject : AnyObject]! {
+        return [
+            "someImage" : KCSFileStoreCollectionName,
+        ]
+    }
+    
+    override func referenceKinveyPropertiesOfObjectsToSave() -> [AnyObject]! {
+        return ["someImage"]
+    }
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var WelcomeLabel: UILabel!
@@ -19,6 +44,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var CameraButton: UIButton!
     
+    @IBOutlet weak var uploadButton: UIButton!
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -37,7 +63,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     self.performSegueWithIdentifier("LoginView", sender: self)
     }
+    
+    
+    @IBAction func uploadImage(sender: AnyObject)
+    {
+        let someImageStore = KCSLinkedAppdataStore.storeWithOptions([
+            KCSStoreKeyCollectionName: "Some-Image-collection",
+            KCSStoreKeyCollectionTemplateClass : SomeImage.self
+            ])
+        
+        let someImage = SomeImage()
+        someImage.someName = "Object with Image"
+        someImage.somePlace = "New York, NY, Haribol"
+        someImage.someImage = imageView.image
+        
+        someImageStore.saveObject(someImage, withCompletionBlock: {
+            (objectsOrNil:[AnyObject]!, errorOrNil: NSError!) -> Void in
+            print("Image Object Saved")
+            
+            }, withProgressBlock: nil)
+        
+    }
 
+    
     
     @IBAction func chooseLocalImage(sender: AnyObject) {
         imagePicker.allowsEditing = false
@@ -59,6 +107,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
     }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
