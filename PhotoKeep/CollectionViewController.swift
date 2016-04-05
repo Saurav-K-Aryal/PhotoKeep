@@ -10,14 +10,12 @@ import Foundation
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var cellImage:UIImageView!
-}
 
 class CollectionViewCrtl: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var cellImage: UIImageView!
+
+    
     
     var imageArray:[SomeImage] = []
     var returnedObject:SomeImage = SomeImage();

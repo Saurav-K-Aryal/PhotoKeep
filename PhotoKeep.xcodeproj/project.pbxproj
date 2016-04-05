@@ -25,6 +25,7 @@
 		36D047ED1CA18D5A00C97706 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047EC1CA18D5A00C97706 /* Social.framework */; };
 		36D047EF1CA18D6400C97706 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047EE1CA18D6400C97706 /* SystemConfiguration.framework */; };
 		36D047F11CA18D6E00C97706 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D047F01CA18D6E00C97706 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		36DB76AE1CB43B120006591B /* CustomCellCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB76AD1CB43B120006591B /* CustomCellCtrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		36D047EE1CA18D6400C97706 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36D047F01CA18D6E00C97706 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		36D047F21CA18E1B00C97706 /* PhotoKeep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoKeep-Bridging-Header.h"; sourceTree = "<group>"; };
+		36DB76AD1CB43B120006591B /* CustomCellCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellCtrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				36BBD99F1CA1C0BF00D0CD59 /* LoginViewController.swift */,
 				36BBD9A11CA1C9C600D0CD59 /* RegistrationViewController.swift */,
 				369887A71CB3E4E7006869C2 /* CollectionViewController.swift */,
+				36DB76AD1CB43B120006591B /* CustomCellCtrl.swift */,
 			);
 			path = PhotoKeep;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BBD9A01CA1C0BF00D0CD59 /* LoginViewController.swift in Sources */,
+				36DB76AE1CB43B120006591B /* CustomCellCtrl.swift in Sources */,
 				36D047CD1CA181BD00C97706 /* ViewController.swift in Sources */,
 				36BBD9A21CA1C9C600D0CD59 /* RegistrationViewController.swift in Sources */,
 				36D047CB1CA181BD00C97706 /* AppDelegate.swift in Sources */,
