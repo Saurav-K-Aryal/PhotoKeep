@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		369887A81CB3E4E7006869C2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369887A71CB3E4E7006869C2 /* CollectionViewController.swift */; };
 		36BBD9A01CA1C0BF00D0CD59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BBD99F1CA1C0BF00D0CD59 /* LoginViewController.swift */; };
 		36BBD9A21CA1C9C600D0CD59 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BBD9A11CA1C9C600D0CD59 /* RegistrationViewController.swift */; };
 		36D047CB1CA181BD00C97706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D047CA1CA181BD00C97706 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		369887A71CB3E4E7006869C2 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		36BBD99F1CA1C0BF00D0CD59 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36BBD9A11CA1C9C600D0CD59 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		36D047C71CA181BD00C97706 /* PhotoKeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoKeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				36D047F21CA18E1B00C97706 /* PhotoKeep-Bridging-Header.h */,
 				36BBD99F1CA1C0BF00D0CD59 /* LoginViewController.swift */,
 				36BBD9A11CA1C9C600D0CD59 /* RegistrationViewController.swift */,
+				369887A71CB3E4E7006869C2 /* CollectionViewController.swift */,
 			);
 			path = PhotoKeep;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				36D047CD1CA181BD00C97706 /* ViewController.swift in Sources */,
 				36BBD9A21CA1C9C600D0CD59 /* RegistrationViewController.swift in Sources */,
 				36D047CB1CA181BD00C97706 /* AppDelegate.swift in Sources */,
+				369887A81CB3E4E7006869C2 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

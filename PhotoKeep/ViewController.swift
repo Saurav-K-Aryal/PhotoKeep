@@ -33,8 +33,16 @@ class SomeImage: NSObject {
     }
 }
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+     var datePicker = UIDatePicker()
+
+    @IBOutlet weak var DateField: UITextField!
+    
+    @IBOutlet weak var pickDate: UIButton!
+    
     @IBOutlet weak var WelcomeLabel: UILabel!
     
     
@@ -49,6 +57,53 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    
+    func initializeDatePicker() {
+        
+        datePicker.datePickerMode = UIDatePickerMode.Date;
+        
+        // this will make the picker appear, when the date
+        // needs to be set
+        DateField.inputView = datePicker
+        DateField.textAlignment = .Center
+        
+        // set the tool bar
+        let toolBar = UIToolbar(frame: CGRect.init(x:0, y:0, width:320, height:44))
+        toolBar.tintColor = UIColor.grayColor()
+        
+        let doneBtn = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "datePickerChanged")
+        
+        let canelBtn = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "datePickerCancelled")
+        
+        let spacerBtn = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([canelBtn,spacerBtn,doneBtn], animated: true)
+        DateField.inputAccessoryView = toolBar
+        
+    }
+
+    
+    
+    @IBAction func pickDateClicked(sender: AnyObject) {
+        DateField.becomeFirstResponder()
+    }
+    
+    // when user cancels, just resign first responder and keep it moving
+    func datePickerCancelled() {
+        DateField.resignFirstResponder()
+    }
+    
+
+    func datePickerChanged() {
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        let strDate = dateFormatter.stringFromDate(datePicker.date)
+        DateField.text = strDate
+        DateField.resignFirstResponder()
+    }
     
     @IBAction func pressedLogout(sender: AnyObject) {
         KCSUser.activeUser().logout()
