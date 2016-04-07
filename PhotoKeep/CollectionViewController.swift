@@ -68,7 +68,7 @@ class CollectionViewCrtl: UIViewController, UICollectionViewDataSource, UICollec
         
         let item = self.imageArray[indexPath.row];
         
-        cell.cellImage.image = item.someImage;
+        cell.imgView.image = item.someImage;
         
         return cell;
     }

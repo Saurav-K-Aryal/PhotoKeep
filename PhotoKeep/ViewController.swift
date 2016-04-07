@@ -179,6 +179,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //                print("Kinvey Ping Failed")
 //            }
 //        }
+        initializeDatePicker()
         imagePicker.delegate = self
         let user_data = KCSUser.activeUser()
         if user_data == nil {
